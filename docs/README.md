@@ -22,7 +22,7 @@ Currently in development.
 ![GitHub last commit](https://img.shields.io/github/last-commit/eggnaut/AutoAlgebra?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/eggnaut/AutoAlgebra?style=for-the-badge)
 
 ## Features:
-Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of a, b, and c (in a quadratic equation).
+Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of _a_, _b_, and _c_ (in a quadratic equation).
 
 ## Usage:
 To generate quadratic equations for practice:
