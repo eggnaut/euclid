@@ -5,7 +5,7 @@ def generateEq():
     b = f'{randint(endpt1, endpt2)}x'
     c = f'{randint(endpt1, endpt2)}'
 
-    eq = f'{a} + {b} + {c} = 0'
+    eq = f'{a} + {b} + {c} = {randint(endpt1, endpt2)}'
     return eq
 
 eqNum = int(input('Please enter the number of equations you want: '))
