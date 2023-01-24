@@ -20,3 +20,13 @@ Currently in development.
 ![GitHub language count](https://img.shields.io/github/languages/count/eggnaut/AutoAlgebra?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/eggnaut/AutoAlgebra?logo=Python&logoColor=yellow&style=for-the-badge)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/eggnaut/AutoAlgebra?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/eggnaut/AutoAlgebra?style=for-the-badge)
+
+## Features:
+Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of a, b, and c (in a quadratic equation).
+
+## Usage:
+To generate quadratic equations for practice:
+1. Download the repository files and source code.
+2. Open the AutoAlgebra folder
+3. Run/execute the `main.py` file
+4. Follow the instructions!
