@@ -6,7 +6,7 @@ def isInt(num: float | int) -> bool:
 a = int(input('\nPlease enter the value of \'a\' in the qudratic equation: '))
 b = int(input('\nPlease enter the value of \'b\' in the qudratic equation: '))
 c = int(input('\nPlease enter the value of \'c\' in the qudratic equation: '))
-d = int(inout('\nPlease enter what the quadratic expression is equal to: '))
+d = int(input('\nPlease enter what the quadratic expression is equal to: '))
 
 c -= d
 
