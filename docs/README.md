@@ -28,5 +28,11 @@ Automatically generates quadratic equations given endpoints and number of equati
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
 2. Open the `AutoAlgebra` folder
-3. Run/execute the `main.py` file
+3. Run/execute the `generate-eq.py` file
+4. Follow the instructions!
+
+To solve quadratic equations:
+1. DOwnload the repository files and source code.
+2. Open the `AutoAlgebra` folder
+3. Run/execute the `eq-solver.py` file
 4. Follow the instructions!
