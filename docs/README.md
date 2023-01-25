@@ -1,5 +1,5 @@
 # AutoAlgebra
-Automatically generate quadratic equations for practice.
+Automatically generate quadratic equations and solve them.
 
 
 Currently in development.
