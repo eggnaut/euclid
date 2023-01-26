@@ -1,4 +1,5 @@
 from random import randint
+from fpdf import FPDF
 
 def generateEq():
   a = f'{randint(endpt1, endpt2)}x^2'
@@ -30,6 +31,11 @@ for x in range(eqNum):
   eq = generateEq()
   equations.append(eq)
 
-for eq in equations:
-  print('\n')
-  print(eq)
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font('comic sans ms', size = 20)
+
+for i in range(len(equations)):
+  pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
+
+pdf.output('QuadraticEqs.pdf')
