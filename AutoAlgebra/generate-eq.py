@@ -1,7 +1,7 @@
 from random import randint
 from fpdf import FPDF
 
-def generateEq():
+def generateEq(endpt1: int, endpt2: int):
   a = f'{randint(endpt1, endpt2)}x^2'
   b = f'{randint(endpt1, endpt2)}x'
   c = f'{randint(endpt1, endpt2)}'
@@ -28,7 +28,7 @@ while repeat:
 equations = []
 
 for x in range(eqNum):
-  eq = generateEq()
+  eq = generateEq(endpt1, endpt2)
   equations.append(eq)
 
 pdf = FPDF()
