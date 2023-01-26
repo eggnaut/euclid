@@ -1,4 +1,4 @@
-import math as mt
+import cmath as cm
 
 def isInt(num: float | int) -> bool:
     return ((num % 1) == 0)
@@ -10,13 +10,13 @@ d = int(input('\nPlease enter what the quadratic expression is equal to: '))
 
 c -= d
 
-if isInt(mt.sqrt(b**2 - 4 * a * c)):
-    if isInt(((-b + (mt.sqrt(b**2 - 4 * a * c))) / 2 * a)):
-        sol1 = (-b + (mt.sqrt(b**2 - 4 * a * c))) / 2 * a
-        sol2 = (-b - (mt.sqrt(b**2 - 4 * a * c))) / 2 * a
+if isInt(cm.sqrt(b**2 - 4 * a * c)):
+    if isInt(((-b + (cm.sqrt(b**2 - 4 * a * c))) / 2 * a)):
+        sol1 = (-b + (cm.sqrt(b**2 - 4 * a * c))) / 2 * a
+        sol2 = (-b - (cm.sqrt(b**2 - 4 * a * c))) / 2 * a
     else:
-        sol1 = f'{-b + (mt.sqrt(b**2 - 4 * a * c))} / {2 * a}'
-        sol2 = f'{-b - (mt.sqrt(b**2 - 4 * a * c))} / {2 * a}'
+        sol1 = f'{-b + (cm.sqrt(b**2 - 4 * a * c))} / {2 * a}'
+        sol2 = f'{-b - (cm.sqrt(b**2 - 4 * a * c))} / {2 * a}'
 else:
     sol1 = f'(-{b} + sqrt({b**2 - 4 * a * c})) / {2 * a}'
     sol2 = f'(-{b} - sqrt({b**2 - 4 * a * c})) / {2 * a}'
