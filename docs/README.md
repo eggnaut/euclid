@@ -24,6 +24,9 @@ Currently in development.
 ## Features:
 Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of _a_, _b_, and _c_ (in a quadratic equation).
 
+`eq-solver.py` - solves quadratic equations with the quadratic formula; experimental
+`generate-eq.py` - generates quadratic equations given a few parameters; functional
+
 ## Usage:
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
