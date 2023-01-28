@@ -27,6 +27,13 @@ Automatically generates quadratic equations given endpoints and number of equati
 - `eq-solver.py` - solves quadratic equations with the quadratic formula; **experimental**
 - `generate-eq.py` - generates quadratic equations given a few parameters; **experimental**
 
+## Setup:
+First, you'll have to install the dependencies for AutoAlgebra:
+1. Download the repository files and source code.
+2. Open the `AutoAlgebra` folder
+3. Run/execute the `dependencies.py` file
+4. You're ready to use AutoAlgebra!
+
 ## Usage:
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
