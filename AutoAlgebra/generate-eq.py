@@ -41,7 +41,6 @@ pdf.add_page()
 
 path = abspath('Comic Sans MS.ttf')
 pdf.add_font('csms', '', path, True)
-
 pdf.set_font('csms', size = 20)
 
 for i in range(len(equations) + 1):
