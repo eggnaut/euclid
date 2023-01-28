@@ -1,6 +1,5 @@
 # AutoAlgebra
-Automatically generate quadratic equations and solve them.
-
+Automatically generate quadratic equations for practice.
 
 Currently in development.
 
@@ -39,10 +38,4 @@ To generate quadratic equations for practice:
 1. Download the repository files and source code.
 2. Open the `AutoAlgebra` folder
 3. Run/execute the `generate-eq.py` file
-4. Follow the instructions!
-
-To solve quadratic equations:
-1. Download the repository files and source code.
-2. Open the `AutoAlgebra` folder
-3. Run/execute the `eq-solver.py` file
 4. Follow the instructions!
