@@ -7,11 +7,15 @@ def generateEq(endpt1: int, endpt2: int, equiv: str):
   a = f'{randint(endpt1, endpt2)}x^2'
   b = f'{randint(endpt1, endpt2)}x'
   c = f'{randint(endpt1, endpt2)}'
+  
+  symbol1 = '-' if randint(1, 2) == 1 else '+'
+  symbol2 = '-' if randint(1, 2) == 1 else '+'
 
   if equiv.lower() == 'yes' or equiv.lower() == 'y':
-    eq = f'{a} + {b} + {c} = 0'
+    eq = f'{a} {symbol1} {b} {symbol2} {c} = 0'
   elif equiv.lower() == 'no' or equiv.lower() == 'n':
-    eq = f'{a} + {b} + {c} = {randint(endpt1, endpt2)}'
+    symbol3 = '-' if randint(1, 2) == 1 else '+'
+    eq = f'{a} {symbol1} {b} {symbol2} {c} = {symbol3}{randint(endpt1, endpt2)}'
   
   return eq
 
