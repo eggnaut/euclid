@@ -23,8 +23,7 @@ Currently in development.
 ## Features:
 Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of _a_, _b_, and _c_ (in a quadratic equation).
 
-- `generate-eq.py` - generates quadratic equations given a few parameters;
-**Note:** This program has not been tested on Windows and may not work on it at all.
+**Note:** This software has not been tested on Windows and may not work on it at all.
 
 ## Setup:
 First, you'll have to install the dependencies for AutoAlgebra:
