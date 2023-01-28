@@ -1,7 +1,6 @@
 from random import randint
 from fpdf import FPDF
-from getpass import getuser
-from platform import system
+from os.path import abspath
 
 def generateEq(endpt1: int, endpt2: int, equiv: str):
   a = f'{randint(endpt1, endpt2)}x^2'
@@ -40,15 +39,12 @@ for x in range(eqNum):
 pdf = FPDF()
 pdf.add_page()
 
-if system() == 'Darwin':
-  user = getuser()
-  pdf.add_font('csms', '', f'/Users/{user}/Documents/AutoAlgebra/AutoAlgebra/Comic Sans MS.ttf', True)
-elif system() == 'Windows':
-  pdf.add_font('csms', '', r'C:\\Windows\Fonts\Comic.ttf', True)
+path = abspath('Comic Sans MS.ttf')
+pdf.add_font('csms', '', path, True)
 
 pdf.set_font('csms', size = 20)
 
-for i in range(len(equations)):
+for i in range(len(equations) + 1):
   pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
 
 pdf.output('QuadraticEqs.pdf')
