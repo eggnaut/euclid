@@ -4,6 +4,8 @@ def isInt(num: float | int) -> bool:
     return ((num % 1) == 0)
 
 def solveEq(a, b, c, d):
+    global sol1, sol2
+    
     c -= d
 
     if isInt(sqrt(b**2 - 4 * a * c)):
