@@ -14,6 +14,7 @@ def generateEq(endpt1: int, endpt2: int, equiv: str):
 
   if equiv.lower() == 'yes' or equiv.lower() == 'y':
     eq = f'{a} {symbol1} {b} {symbol2} {c} = 0'
+  
   elif equiv.lower() == 'no' or equiv.lower() == 'n':
     symbol3 = '-' if randint(1, 2) == 1 else '+'
     eq = f'{a} {symbol1} {b} {symbol2} {c} = {symbol3}{randint(endpt1, endpt2)}'
