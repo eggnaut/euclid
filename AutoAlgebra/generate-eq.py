@@ -1,5 +1,7 @@
 from random import randint
 from fpdf import FPDF
+from subprocess import call
+from platform import system
 from os.path import abspath
 
 def generateEq(endpt1: int, endpt2: int, equiv: str):
@@ -18,6 +20,11 @@ def generateEq(endpt1: int, endpt2: int, equiv: str):
   
   return eq
 
+if system() == 'Darwin':
+  call('clear', shell = True)
+elif system() == 'Windows':
+  call('cls', shell = True)
+  
 eqNum = int(input('Please enter the number of equations you want: '))
 equiv = input('Do you want the equation to be equal to zero: ' )
 
