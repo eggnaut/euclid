@@ -48,9 +48,10 @@ pdf.add_page()
 
 path = abspath('Comic Sans MS.ttf')
 pdf.add_font('csms', '', path, True)
-pdf.set_font('csms', size = 20)
+pdf.set_font('csms', '',  20)
 
 for i in range(len(equations) + 1):
   pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
+  pdf.cell(200, 10, txt = '', ln = i, align = 'L')
 
 pdf.output('QuadraticEqs.pdf')
