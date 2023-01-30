@@ -1,8 +1,6 @@
 # AutoAlgebra
 Automatically generate quadratic equations for practice.
 
-Currently in development.
-
 ## Socials:
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/eggnaut/AutoAlgebra?color=yellow&logo=Github&style=for-the-badge) ![GitHub watchers](https://img.shields.io/github/watchers/eggnaut/AutoAlgebra?color=orange&logo=Github&style=for-the-badge)
