@@ -21,7 +21,7 @@ def generateEq(endpt1: int, endpt2: int, equiv: str):
   
   return eq
 
-if system() == 'Darwin':
+if system() == 'Darwin' or system() == 'Linux':
   call('clear', shell = True)
 elif system() == 'Windows':
   call('cls', shell = True)
