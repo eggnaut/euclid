@@ -5,19 +5,35 @@ from platform import system
 from os.path import abspath
 
 def generateEq(endpt1: int, endpt2: int, equiv: str):
-  a = f'{randint(endpt1, endpt2)}x^2'
-  b = f'{randint(endpt1, endpt2)}x'
-  c = f'{randint(endpt1, endpt2)}'
+  a = randint(endpt1, endpt2)
+  if a == 1:
+    a = ''
+
+  b = randint(endpt1, endpt2)
+  if b == 1:
+    b = ''
+
+  c = randint(endpt1, endpt2)
   
   symbol1 = '-' if randint(1, 2) == 1 else '+'
   symbol2 = '-' if randint(1, 2) == 1 else '+'
+  symbol3 = '-' if randint(1, 2) == 1 else '+'
+
+  p1 = f'{symbol1}{a}x^2'
+  p2 = f'{symbol2} {b}x'
+  p3 = f'{symbol3} {c}'
 
   if equiv.lower() == 'yes' or equiv.lower() == 'y':
-    eq = f'{a} {symbol1} {b} {symbol2} {c} = 0'
+    eq = f'{p1} {p2} {p3} = 0'
   
   elif equiv.lower() == 'no' or equiv.lower() == 'n':
-    symbol3 = '-' if randint(1, 2) == 1 else '+'
-    eq = f'{a} {symbol1} {b} {symbol2} {c} = {symbol3}{randint(endpt1, endpt2)}'
+    d = randint(endpt1, endpt2)
+
+    symbol4 = '-' if randint(1, 2) == 1 else '+'
+
+    p4 = f'{symbol4}{d}'
+
+    eq = f'{p1} {p2} {p3} = {p4}'
   
   return eq
 
