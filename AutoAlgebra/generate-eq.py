@@ -18,7 +18,7 @@ def generateEq(endpt1: int, endpt2: int, equiv: str):
   c = randint(endpt1, endpt2)
   
   symbol1 = '-' if randint(1, 2) == 1 else ''
-  symbol2 = '-' if randint(1, 2) == 1 else ''
+  symbol2 = '-' if randint(1, 2) == 1 else '+'
   symbol3 = '-' if randint(1, 2) == 1 else '+'
 
   p1 = f'{symbol1}{a}x^2'
