@@ -84,7 +84,7 @@ for i in range(len(equations) + 1):
 	pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
 	pdf.cell(200, 10, txt = '', ln = i, align = 'L')
 
-# saves PDF to computer, doesn't overwrite existing PDF
+# gets user's downloads folder absolute path
 if system() == 'Darwin' or system() == 'Linux':
     env = getenv('HOME')
     pdfPath = f'{env}/Downloads'
