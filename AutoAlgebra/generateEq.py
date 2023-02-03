@@ -1,3 +1,6 @@
+# imports custom script from custom module
+from eqSolver import solveEq
+
 # imports functions/classes from modules
 from random import randint
 from fpdf import FPDF
@@ -62,27 +65,48 @@ while repeat:
 # empty list to store eqs
 equations = []
 
+# empty list to store answers
+answers = []
+
 # generates number of equations user asks for
 for x in range(eqNum):
 	eq = generateEq(endpt1, endpt2, equiv)
 	equations.append(eq)
 
+# solves each equation that was generated
+for y in range(eqNum):
+	ans = solveEq(equations[y - 1])
+	answers.append(ans)
+
 # generates empty PDF to add eqs
-pdf = FPDF()
-pdf.add_page()
+qPDF = FPDF()
+qPDF.add_page()
+
+# generates empty PDF to add answers
+aPDF = FPDF()
+aPDF.add_page()
 
 # loads font for use, either Comic Sans MS or Arial
 try:
 	fontPath = abspath('Comic Sans MS.ttf')
-	pdf.add_font('csms', '', fontPath, True)
-	pdf.set_font('csms', '',  20)
+	qPDF.add_font('csms', '', fontPath, True)
+	qPDF.set_font('csms', '',  20)
+
+	aPDF.add_font('csms', '', fontPath, True)
+	aPDF.set_font('csms', '',  20)
 except:
-	pdf.set_font('Arial', '', 20)
+	qPDF.set_font('Arial', '', 20)
+
+	aPDF.set_font('Arial', '', 20)
 
 # adds each equation to the PDF
 for i in range(len(equations) + 1):
-	pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
-	pdf.cell(200, 10, txt = '', ln = i, align = 'L')
+	qPDF.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
+	qPDF.cell(200, 10, txt = '', ln = i, align = 'L')
+
+for i in range(len(answers) + 1):
+	aPDF.cell(200, 10, txt = answers[i - 1], ln = i, align = 'L')
+	aPDF.cell(200, 10, txt = '', ln = i, align = 'L')
 
 # gets user's downloads folder absolute path
 if system() == 'Darwin' or system() == 'Linux':
@@ -92,8 +116,13 @@ elif system() == 'Windows':
     env = getenv('USERPROFILE')
     pdfPath = f'{env}\\Downloads'
     
-pdf.output(f'{pdfPath}/QuadraticEqs.pdf')
+qPDF.output(f'{pdfPath}/QuadraticEqs.pdf')
+aPDF.output(f'{pdfPath}/EqAnswers.pdf')
 
-# prints a success message
-print(f'\nSuccess! The PDF was saved in your Downloads folder here:')
-print(f'\n{pdfPath}/QuadraticEqs.pdf\n')
+# prints a success message for the questions pdf
+print(f'\nSuccess! The questions PDF was saved in your Downloads folder at:')
+print(f'\n{pdfPath}/QuadraticEqs.pdf')
+
+# prints a success message for the answers pdf
+prin(f'\nSuccess! The answers PDF was saved in your Downloads folder at:')
+print(f'\n{pdfPath}/QuadraticEqs.pdf')

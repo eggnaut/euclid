@@ -34,5 +34,5 @@ First, you'll have to install the dependencies for AutoAlgebra:
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
 2. Open the `AutoAlgebra` folder
-3. Run/execute the `generate-eq.py` file
+3. Run/execute the `generateEq.py` file
 4. Follow the instructions!
