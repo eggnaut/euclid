@@ -124,5 +124,5 @@ print(f'\nSuccess! The questions PDF was saved in your Downloads folder at:')
 print(f'\n{pdfPath}/QuadraticEqs.pdf')
 
 # prints a success message for the answers pdf
-prin(f'\nSuccess! The answers PDF was saved in your Downloads folder at:')
+print(f'\nSuccess! The answers PDF was saved in your Downloads folder at:')
 print(f'\n{pdfPath}/QuadraticEqs.pdf')
