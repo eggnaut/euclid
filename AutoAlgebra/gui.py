@@ -5,6 +5,7 @@ from fpdf import FPDF
 from platform import system
 from os.path import abspath
 from os import getenv
+from functools import partial
 import PySimpleGUI as sg
 
 sg.theme('SystemDefaultForReal')
@@ -69,7 +70,25 @@ while True:
             sg.popup_no_buttons(
                 f'Please check that the first endpoint is greater than 0.\n\nPlease check that the second endpoint is greater than the first endpoint.',
                 font = font,
-                title = 'Error',
+                title = 'Error \u274C',
+                keep_on_top = True,
+                auto_close = True,
+                auto_close_duration = 4
+            )
+        elif num <= 0:
+            sg.popup_no_buttons(
+                f'Please check that the number of equations requested is greater than 0.',
+                font = font,
+                title = 'Error \u274C',
+                keep_on_top = True,
+                auto_close = True,
+                auto_close_duration = 4
+            )
+        elif not (equiv.lower() == 'y' or equiv.lower() == 'yes' or equiv.lower() == 'n' or equiv.lower() == 'no'):
+            sg.popup_no_buttons(
+                f'Please make sure you entered \'y\' or \'n\' for the second question:\n\n\'Do you want the equation to be equal to zero (y/n)\'',
+                font = font,
+                title = 'Error \u274C',
                 keep_on_top = True,
                 auto_close = True,
                 auto_close_duration = 4
@@ -80,13 +99,13 @@ while True:
                 eq = generateEq(endpt1, endpt2, equiv)
                 equations.append(eq)
 
-        generatePDF()
+            generatePDF()
 
-        sg.popup_no_buttons(
-            f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now click the \'Quit  \u274C\' button.', 
-            font = font, 
-            title = 'Success', 
-            keep_on_top = True, 
-            auto_close = True, 
-            auto_close_duration = 4
-            )
+            sg.popup_no_buttons(
+                f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now quit the app.', 
+                font = font, 
+                title = 'Success \u2705', 
+                keep_on_top = True, 
+                auto_close = True, 
+                auto_close_duration = 4
+                )
