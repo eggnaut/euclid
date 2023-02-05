@@ -5,7 +5,6 @@ from fpdf import FPDF
 from platform import system
 from os.path import abspath
 from os import getenv
-from functools import partial
 import PySimpleGUI as sg
 
 sg.theme('SystemDefaultForReal')
