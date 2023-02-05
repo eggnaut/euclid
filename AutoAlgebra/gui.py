@@ -69,4 +69,11 @@ while True:
 
         generatePDF()
 
-        sg.popup_no_buttons(f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now click the \'Quit  \u274C\' button.', font = font, title = 'Success!', keep_on_top = True, auto_close = True, auto_close_duration = 4)
+        sg.popup_no_buttons(
+            f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now click the \'Quit  \u274C\' button.', 
+            font = font, 
+            title = 'Success', 
+            keep_on_top = True, 
+            auto_close = True, 
+            auto_close_duration = 4
+            )
