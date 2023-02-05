@@ -24,6 +24,8 @@ layout = [
 wn = sg.Window('AutoAlgebra', layout, font = font)
 
 def generatePDF():
+    global pdfPath
+
     pdf = FPDF()
     pdf.add_page()
 
@@ -67,4 +69,4 @@ while True:
 
         generatePDF()
 
-        sg.popup('You can now click the \'Quit\' button!', font = font, title = 'Success!', keep_on_top = True, button_type = sg.POPUP_BUTTONS_NO_BUTTONS, auto_close = True, auto_close_duration = 4, custom_text = 'Quit  \u274C')
+        sg.popup_no_buttons(f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now click the \'Quit  \u274C\' button.', font = font, title = 'Success!', keep_on_top = True, auto_close = True, auto_close_duration = 4)
