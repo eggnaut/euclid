@@ -46,8 +46,11 @@ def generatePDF():
     elif system() == 'Windows':
         env = getenv('USERPROFILE')
         pdfPath = f'{env}\\Downloads'
-		
-    pdf.output(f'{pdfPath}/QuadraticEqs.pdf')
+	
+    if system() == 'Darwin' or system() == 'Linux':
+        pdf.output(f'{pdfPath}/QuadraticEqs.pdf')
+    elif system() == 'Windows':
+        pdf.output(f'{pdfPath}\\QuadraticEqs.pdf')
 
 while True:
     ev, val = wn.read()
@@ -62,10 +65,20 @@ while True:
         endpt1 = int(val['-ENDPT1-'])
         endpt2 = int(val['-ENDPT2-'])
 
-        equations = []
-        for x in range(num):
-            eq = generateEq(endpt1, endpt2, equiv)
-            equations.append(eq)
+        if not (endpt1 > 0 and endpt2 > endpt1):
+            sg.popup_no_buttons(
+                f'Please check that the first endpoint is greater than 0.\n\nPlease check that the second endpoint is greater than the first endpoint.',
+                font = font,
+                title = 'Error',
+                keep_on_top = True,
+                auto_close = True,
+                auto_close_duration = 4
+            )
+        else:
+            equations = []
+            for x in range(num):
+                eq = generateEq(endpt1, endpt2, equiv)
+                equations.append(eq)
 
         generatePDF()
 
