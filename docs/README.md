@@ -21,7 +21,7 @@ Automatically generate quadratic equations to study/practice with.
 ## Features:
 Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of _a_, _b_, and _c_ (in a quadratic equation).
 
-**Note:** This software has not been tested on Windows and may not work on it at all.
+**Note:** This software has not been tested on Windows or Linux and may not work on them at all.
 
 ## Setup:
 First, you'll have to install the dependencies for AutoAlgebra:
