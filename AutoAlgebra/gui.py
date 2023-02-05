@@ -1,4 +1,10 @@
+from eqGenerator import generateEq
+
 from sys import exit
+from fpdf import FPDF
+from platform import system
+from os.path import abspath
+from os import getenv
 import PySimpleGUI as sg
 
 sg.theme('SystemDefaultForReal')
@@ -17,6 +23,30 @@ layout = [
 
 wn = sg.Window('AutoAlgebra', layout, font = font)
 
+def generatePDF():
+    pdf = FPDF()
+    pdf.add_page()
+
+    try:
+        fontPath = abspath('Comic Sans MS.ttf')
+        pdf.add_font('csms', '', fontPath, True)
+        pdf.set_font('csms', '',  20)
+    except:
+        pdf.set_font('Arial', '', 20)
+
+    for i in range(len(equations) + 1):
+        pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
+        pdf.cell(200, 10, txt = '', ln = i, align = 'L')
+
+    if system() == 'Darwin' or system() == 'Linux':
+        env = getenv('HOME')
+        pdfPath = f'{env}/Downloads'
+    elif system() == 'Windows':
+        env = getenv('USERPROFILE')
+        pdfPath = f'{env}\\Downloads'
+		
+    pdf.output(f'{pdfPath}/QuadraticEqs.pdf')
+
 while True:
     ev, val = wn.read()
 
@@ -29,3 +59,10 @@ while True:
         equiv = val['-EQUIV-']
         endpt1 = val['-ENDPT1-']
         endpt2 = val['-ENDPT2-']
+
+        equations = []
+        for x in range(num):
+            eq = generateEq(endpt1, endpt2, equiv)
+            equations.append(eq)
+
+        generatePDF()
