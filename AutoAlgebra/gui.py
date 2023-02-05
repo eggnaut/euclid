@@ -11,7 +11,7 @@ sg.theme('SystemDefaultForReal')
 font = ('Jost', 20)
 
 layout = [
-    [sg.P(), sg.B('Cancel  \u274C', key = '-QUIT-')],
+    [sg.P(), sg.B('Quit  \u274C', key = '-QUIT-')],
     [sg.T('')],
     [sg.T('Please enter the number of equations you want:'), sg.P(), sg.InputText(key = '-NUM-')],
     [sg.T('Do you want the equation to be equal to zero (y/n):'), sg.P(), sg.InputText(key = '-EQUIV-')],
@@ -55,10 +55,10 @@ while True:
         exit()
 
     if ev == '-SUBMIT-':
-        num = val['-NUM-']
+        num = int(val['-NUM-'])
         equiv = val['-EQUIV-']
-        endpt1 = val['-ENDPT1-']
-        endpt2 = val['-ENDPT2-']
+        endpt1 = int(val['-ENDPT1-'])
+        endpt2 = int(val['-ENDPT2-'])
 
         equations = []
         for x in range(num):
