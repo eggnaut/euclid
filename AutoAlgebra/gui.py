@@ -66,3 +66,5 @@ while True:
             equations.append(eq)
 
         generatePDF()
+
+        sg.popup('You can now click the \'Quit\' button!', font = font, title = 'Success!', keep_on_top = True, button_type = sg.POPUP_BUTTONS_NO_BUTTONS, auto_close = True, auto_close_duration = 4, custom_text = 'Quit  \u274C')
