@@ -1,5 +1,7 @@
+# imports custom scripts
 from eqGenerator import generateEq
 
+# imports functions/classes from modules
 from sys import exit
 from fpdf import FPDF
 from platform import system
@@ -7,9 +9,11 @@ from os.path import abspath
 from os import getenv
 import PySimpleGUI as sg
 
+# sets the theme and font
 sg.theme('Black')
 font = ('Comic Sans MS', 20)
 
+# config or layout for the PySimpleGUI app
 layout = [
     [sg.P(), sg.B('Quit  \u274C', key = '-QUIT-')],
     [sg.T('')],
@@ -21,8 +25,10 @@ layout = [
     [sg.P(), sg.B('Submit  \u2705', key = '-SUBMIT-')]
 ]
 
+# creates the window with the pre-defined layout
 wn = sg.Window('AutoAlgebra', layout, font = font)
 
+# function to generate the PDF with equations
 def generatePDF():
     global pdfPath
 
@@ -52,6 +58,7 @@ def generatePDF():
     elif system() == 'Windows':
         pdf.output(f'{pdfPath}\\QuadraticEqs.pdf')
 
+# main loop for the PySimpleGUI app
 while True:
     ev, val = wn.read()
 
@@ -59,12 +66,14 @@ while True:
         wn.close()
         exit()
 
+    # if user clicks submit, then generate equations
     if ev == '-SUBMIT-':
         num = int(val['-NUM-'])
         equiv = val['-EQUIV-']
         endpt1 = int(val['-ENDPT1-'])
         endpt2 = int(val['-ENDPT2-'])
 
+        # error message for endpoints
         if not (endpt1 > 0 and endpt2 > endpt1):
             sg.popup_no_buttons(
                 f'Please check that the first endpoint is greater than 0.\n\nPlease check that the second endpoint is greater than the first endpoint.',
@@ -74,6 +83,8 @@ while True:
                 auto_close = True,
                 auto_close_duration = 4
             )
+        
+        # error message for number of equations
         elif num <= 0:
             sg.popup_no_buttons(
                 f'Please check that the number of equations requested is greater than 0.',
@@ -83,6 +94,8 @@ while True:
                 auto_close = True,
                 auto_close_duration = 4
             )
+
+        # error message for incorrect input
         elif not (equiv.lower() == 'y' or equiv.lower() == 'yes' or equiv.lower() == 'n' or equiv.lower() == 'no'):
             sg.popup_no_buttons(
                 f'Please make sure you entered \'y\' or \'n\' for the second question:\n\n\'Do you want the equation to be equal to zero (y/n)\'',
@@ -92,6 +105,8 @@ while True:
                 auto_close = True,
                 auto_close_duration = 4
             )
+
+        # actually start generating equations and PDF
         else:
             equations = []
             for x in range(num):
@@ -100,6 +115,7 @@ while True:
 
             generatePDF()
 
+            # success message
             sg.popup_no_buttons(
                 f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now quit the app.', 
                 font = font, 
