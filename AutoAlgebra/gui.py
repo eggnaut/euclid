@@ -7,8 +7,8 @@ from os.path import abspath
 from os import getenv
 import PySimpleGUI as sg
 
-sg.theme('SystemDefaultForReal')
-font = ('Jost', 20)
+sg.theme('Black')
+font = ('Comic Sans MS', 20)
 
 layout = [
     [sg.P(), sg.B('Quit  \u274C', key = '-QUIT-')],
