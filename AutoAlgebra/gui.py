@@ -85,7 +85,7 @@ while True:
             )
         
         # error message for number of equations
-        elif num <= 0:
+        if num <= 0:
             sg.popup_no_buttons(
                 f'Please check that the number of equations requested is greater than 0.',
                 font = font,
@@ -96,7 +96,7 @@ while True:
             )
 
         # error message for incorrect input
-        elif not (equiv.lower() == 'y' or equiv.lower() == 'yes' or equiv.lower() == 'n' or equiv.lower() == 'no'):
+        if not (equiv.lower() == 'y' or equiv.lower() == 'yes' or equiv.lower() == 'n' or equiv.lower() == 'no'):
             sg.popup_no_buttons(
                 f'Please make sure you entered \'y\' or \'n\' for the second question:\n\n\'Do you want the equation to be equal to zero (y/n)\'',
                 font = font,
