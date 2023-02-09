@@ -10,7 +10,7 @@ from os import getenv
 import PySimpleGUI as sg
 
 # sets the theme and font
-sg.theme('Black')
+sg.theme('Default1')
 font = ('Comic Sans MS', 20)
 
 # config or layout for the PySimpleGUI app
