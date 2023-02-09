@@ -4,6 +4,7 @@ Automatically generate quadratic equations to study/practice with.
 ## Socials:
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/eggnaut/AutoAlgebra?color=yellow&logo=Github&style=for-the-badge) ![GitHub watchers](https://img.shields.io/github/watchers/eggnaut/AutoAlgebra?color=orange&logo=Github&style=for-the-badge)
+
 ## Download:
 
 ![GitHub all releases](https://img.shields.io/github/downloads/eggnaut/AutoAlgebra/total?style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/eggnaut/AutoAlgebra?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/eggnaut/AutoAlgebra?style=for-the-badge)
