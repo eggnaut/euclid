@@ -11,13 +11,13 @@ import PySimpleGUI as sg
 
 # sets the theme and font
 theme = {
-    'BACKGROUND': '#000066',
-    'TEXT': '#FFCC66',
-    'INPUT': '#339966',
-    'TEXT_INPUT': '#000000',
-    'SCROLL': '#99CC99',
-    'BUTTON': ('#003333', '#FFCC66'),
-    'PROGRESS': ('#D1826B', '#CC8019'),
+    'BACKGROUND': '#FFFFFF',
+    'TEXT': '#FFFFFF',
+    'INPUT': '#FFFFFF',
+    'TEXT_INPUT': '#FFFFFF',
+    'SCROLL': '#FFFFFF',
+    'BUTTON': ('#FFFFFF', '#FFFFFF'),
+    'PROGRESS': ('#FFFFFF', '#FFFFFF'),
     'BORDER': 1, 'SLIDER_DEPTH': 0, 
     'PROGRESS_DEPTH': 0, 
 }
