@@ -10,7 +10,26 @@ from os import getenv
 import PySimpleGUI as sg
 
 # sets the theme and font
-sg.theme('Default1')
+theme = {
+    'BACKGROUND': '#000066',
+    'TEXT': '#FFCC66',
+    'INPUT': '#339966',
+    'TEXT_INPUT': '#000000',
+    'SCROLL': '#99CC99',
+    'BUTTON': ('#003333', '#FFCC66'),
+    'PROGRESS': ('#D1826B', '#CC8019'),
+    'BORDER': 1, 'SLIDER_DEPTH': 0, 
+    'PROGRESS_DEPTH': 0, 
+}
+
+theme['BACKGROUND'] = '#FFFFFF'
+theme['TEXT'] = '#000000'
+theme['INPUT'] = '#BABABA'
+theme['BUTTON'] = ('#FFFFFF', '#000000')
+
+sg.LOOK_AND_FEEL_TABLE['AutoAlgebraTheme'] = theme
+
+sg.theme('AutoAlgebraTheme')
 font = ('Comic Sans MS', 20)
 
 # config or layout for the PySimpleGUI app
