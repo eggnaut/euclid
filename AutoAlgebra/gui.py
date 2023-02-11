@@ -24,6 +24,7 @@ theme = {
 
 theme['BACKGROUND'] = '#FFFFFF'
 theme['TEXT'] = '#000000'
+theme['TEXT_INPUT'] = '#000000'
 theme['INPUT'] = '#BABABA'
 theme['BUTTON'] = ('#FFFFFF', '#000000')
 
