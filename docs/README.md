@@ -1,5 +1,8 @@
-# AutoAlgebra
+<div align = 'center'>
+<img width = '400' height = '400' src = 'https://github.com/eggnaut/AutoAlgebra/blob/main/docs/logo.jpg'> </img>
+<h1> AutoAlgebra </h1>
 Automatically generate quadratic equations to study/practice with.
+</div>
 
 ## Socials:
 
