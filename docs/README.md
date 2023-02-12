@@ -9,7 +9,7 @@ Automatically generate quadratic equations to study/practice with.
 
 ## Download:
 
-![GitHub all releases](https://img.shields.io/github/downloads/eggnaut/euclid/total?style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/eggnaut/euclid?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/eggnaut/euclid?style=for-the-badge)
+![GitHub Releases](https://img.shields.io/github/downloads/eggnaut/euclid/total?style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/eggnaut/euclid?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/eggnaut/euclid?style=for-the-badge)
 
 ## Developers:
 
