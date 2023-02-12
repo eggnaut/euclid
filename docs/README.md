@@ -1,4 +1,5 @@
 <div align = 'center'>
+<img width = '400' height = '400' src = './logo.png'> </img>
 <h1> euclid </h1>
 Automatically generate quadratic equations to study/practice with.
 </div>
