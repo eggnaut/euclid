@@ -58,4 +58,4 @@ If you want to build euclid into an application yourself:
 2. Open the `euclid` folder
 3. Run/execute the `euclidBuild.py` file
 4. Look inside the `docs` folder. There should be a `dist` folder. Open it.
-5. Inside the `dist` folder are two builds of euclid, one is an `.exe` and the other is an app.
+5. Inside the `dist` folder should be two builds of euclid, one is an `.exe` and the other is an app.
