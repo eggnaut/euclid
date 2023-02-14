@@ -52,6 +52,7 @@ If you want to use your command line (for example Terminal on macOS):
 **Note:** This is build script only works and builds for macOS and Linux.
 
 **Note:** This script has not been tested on Linux or Windows.
+
 If you want to build euclid into an application yourself:
 1. Download the repository files and source code.
 2. Open the `euclid` folder
