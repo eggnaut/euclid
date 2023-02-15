@@ -46,16 +46,3 @@ If you want to use your command line (for example Terminal on macOS):
 2. Open the `euclid` folder
 3. Run/execute the `eqGenerator.py` file
 4. Follow the instructions!
-
-
-## Building:
-**Note:** This is build script only works and builds for macOS and Linux.
-
-**Note:** This script has not been tested on Linux or Windows.
-
-If you want to build euclid into an application yourself:
-1. Download the repository files and source code.
-2. Open the `euclid` folder
-3. Run/execute the `euclidBuild.py` file
-4. Look inside the `docs` folder. There should be a `dist` folder. Open it.
-5. Inside the `dist` folder should be two builds of euclid, one is an `.exe` and the other is an app.
