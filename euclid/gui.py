@@ -28,9 +28,9 @@ theme['TEXT_INPUT'] = '#000000'
 theme['INPUT'] = '#BABABA'
 theme['BUTTON'] = ('#FFFFFF', '#000000')
 
-sg.LOOK_AND_FEEL_TABLE['AutoAlgebraTheme'] = theme
+sg.LOOK_AND_FEEL_TABLE['euclid'] = theme
 
-sg.theme('AutoAlgebraTheme')
+sg.theme('euclid')
 font = ('Comic Sans MS', 20)
 
 # config or layout for the PySimpleGUI app
