@@ -44,7 +44,7 @@ layout = [
 ]
 
 # creates the window with the pre-defined layout
-wn = sg.Window('AutoAlgebra', layout, font = font)
+wn = sg.Window('euclid', layout, font = font)
 
 # function for generating the equation
 def generateEq(endpt1: int, endpt2: int, equiv: str):
