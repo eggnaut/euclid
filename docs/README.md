@@ -40,9 +40,3 @@ To generate quadratic equations for practice:
 2. Open the `euclid` folder
 3. Run/execute the `gui.py` file
 4. Follow the instructions!
-
-If you want to use your command line (for example Terminal on macOS):
-1. Download the repository files and source code.
-2. Open the `euclid` folder
-3. Run/execute the `eqGenerator.py` file
-4. Follow the instructions!
