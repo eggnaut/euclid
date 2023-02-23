@@ -28,21 +28,15 @@ import PySimpleGUI as sg
 # sets the theme and font
 theme = {
     'BACKGROUND': '#FFFFFF',
-    'TEXT': '#FFFFFF',
-    'INPUT': '#FFFFFF',
-    'TEXT_INPUT': '#FFFFFF',
+    'TEXT': '#000000',
+    'INPUT': '#BABABA',
+    'TEXT_INPUT': '#000000',
     'SCROLL': '#FFFFFF',
-    'BUTTON': ('#FFFFFF', '#FFFFFF'),
+    'BUTTON': ('#FFFFFF', '#000000'),
     'PROGRESS': ('#FFFFFF', '#FFFFFF'),
     'BORDER': 1, 'SLIDER_DEPTH': 0, 
     'PROGRESS_DEPTH': 0, 
 }
-
-theme['BACKGROUND'] = '#FFFFFF'
-theme['TEXT'] = '#000000'
-theme['TEXT_INPUT'] = '#000000'
-theme['INPUT'] = '#BABABA'
-theme['BUTTON'] = ('#FFFFFF', '#000000')
 
 sg.LOOK_AND_FEEL_TABLE['euclid'] = theme
 
