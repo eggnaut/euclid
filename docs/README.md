@@ -38,5 +38,5 @@ First, you'll have to install the dependencies for euclid:
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
 2. Open the `euclid` folder
-3. Run/execute the `main.py` file
+3. Run/execute the `app.py` file
 4. Follow the instructions!
