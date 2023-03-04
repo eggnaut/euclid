@@ -41,4 +41,4 @@ To generate quadratic equations for practice:
 
 ## License:
 This project is licensed under the `GNU Lesser General Public License v2.1` license.
-License information can be found in `docs/LICENSE.md`
+License information can be found in `docs/LICENSE.md`.
