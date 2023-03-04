@@ -30,13 +30,15 @@ Automatically generates quadratic equations given endpoints and number of equati
 ## Setup:
 First, you'll have to install the dependencies for euclid:
 1. Download the repository files and source code.
-2. Open the `euclid` folder
-3. Run/execute the `dependencies.py` file
+2. Run/execute the `euclid/dependencies.py` file.
 4. You're ready to use euclid!
 
 ## Usage:
 To generate quadratic equations for practice:
 1. Download the repository files and source code.
-2. Open the `euclid` folder
-3. Run/execute the `app.py` file
+2. Run/execute the `euclid/app.py` file.
 4. Follow the instructions!
+
+## License:
+This project is licensed under the `GNU Lesser General Public License v2.1` license.
+License information can be found in `docs/LICENSE.md`
