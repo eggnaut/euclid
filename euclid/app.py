@@ -16,32 +16,17 @@
 #    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
 #    USA
 
+from core import *
+
 # imports functions/classes from modules
 from sys import exit
-from fpdf import FPDF
 from platform import system
-from os.path import abspath
 from os import getenv
-from random import randint
 import PySimpleGUI as sg
-
-# sets the theme and font
-theme = {
-    'BACKGROUND': '#FFFFFF',
-    'TEXT': '#000000',
-    'INPUT': '#BABABA',
-    'TEXT_INPUT': '#000000',
-    'SCROLL': '#FFFFFF',
-    'BUTTON': ('#FFFFFF', '#000000'),
-    'PROGRESS': ('#FFFFFF', '#FFFFFF'),
-    'BORDER': 1, 'SLIDER_DEPTH': 0, 
-    'PROGRESS_DEPTH': 0, 
-}
 
 sg.LOOK_AND_FEEL_TABLE['euclid'] = theme
 
 sg.theme('euclid')
-font = ('Comic Sans MS', 20)
 
 # config or layout for the PySimpleGUI app
 layout = [
@@ -57,70 +42,6 @@ layout = [
 
 # creates the window with the pre-defined layout
 wn = sg.Window('euclid', layout, font = font)
-
-# function for generating the equation
-def generateEq(endpt1: int, endpt2: int, equiv: str):
-	a = randint(endpt1, endpt2)
-	if a == 1:
-		a = ''
-
-	b = randint(endpt1, endpt2)
-	if b == 1:
-		b = ''
-
-	c = randint(endpt1, endpt2)
-
-	symbol1 = '-' if randint(1, 2) == 1 else ''
-	symbol2 = '-' if randint(1, 2) == 1 else '+'
-	symbol3 = '-' if randint(1, 2) == 1 else '+'
-
-	p1 = f'{symbol1}{a}x^2'
-	p2 = f'{symbol2} {b}x'
-	p3 = f'{symbol3} {c}'
-
-	if equiv.lower() == 'yes' or equiv.lower() == 'y':
-		eq = f'{p1} {p2} {p3} = 0'
-
-	elif equiv.lower() == 'no' or equiv.lower() == 'n':
-		d = randint(endpt1, endpt2)
-
-		symbol4 = '-' if randint(1, 2) == 1 else ''
-
-		p4 = f'{symbol4}{d}'
-
-		eq = f'{p1} {p2} {p3} = {p4}'
-  
-	return eq
-
-# function to generate the PDF with equations
-def generatePDF():
-    global pdfPath
-
-    pdf = FPDF()
-    pdf.add_page()
-
-    try:
-        fontPath = abspath('Comic Sans MS.ttf')
-        pdf.add_font('csms', '', fontPath, True)
-        pdf.set_font('csms', '',  20)
-    except:
-        pdf.set_font('Arial', '', 20)
-
-    for i in range(len(equations) + 1):
-        pdf.cell(200, 10, txt = equations[i - 1], ln = i, align = 'L')
-        pdf.cell(200, 10, txt = '', ln = i, align = 'L')
-
-    if system() == 'Darwin' or system() == 'Linux':
-        env = getenv('HOME')
-        pdfPath = f'{env}/Downloads'
-    elif system() == 'Windows':
-        env = getenv('USERPROFILE')
-        pdfPath = f'{env}\\Downloads'
-	
-    if system() == 'Darwin' or system() == 'Linux':
-        pdf.output(f'{pdfPath}/QuadraticEqs.pdf')
-    elif system() == 'Windows':
-        pdf.output(f'{pdfPath}\\QuadraticEqs.pdf')
 
 # main loop for the PySimpleGUI app
 if __name__ == '__main__':
@@ -178,11 +99,18 @@ if __name__ == '__main__':
                     eq = generateEq(endpt1, endpt2, equiv)
                     equations.append(eq)
 
-                generatePDF()
+                generatePDF(equations)
+
+                if system() == 'Darwin' or system() == 'Linux':
+                    env = getenv('HOME')
+                    pdfPath = f'{env}/Downloads/QuadraticEqs.pdf'
+                elif system() == 'Windows':
+                    env = getenv('USERPROFILE')
+                    pdfPath = f'{env}\\Downloads\\QuadraticEqs.pdf'
 
                 # success message
                 sg.popup_no_buttons(
-                    f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}/QuadraticEqs.pdf\n\nYou can now quit the app.', 
+                    f'The PDF was saved in your Downloads folder here:\n\n{pdfPath}\n\nYou can now quit the app.', 
                     font = font, 
                     title = 'Success \u2705', 
                     keep_on_top = True, 
