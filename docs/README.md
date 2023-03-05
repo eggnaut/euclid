@@ -4,6 +4,9 @@
 Automatically generate quadratic equations to study/practice with.
 </div>
 
+## Archive Notice:
+`euclid` will stop recieving major updates as of March 4, 2023. Minor changes and fixes may be made, but no guarentees. New features will not be added and euclid will not be tested further. Use at your own risk. The project may not function properly with newer versions of Python.
+
 ## Socials:
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/eggnaut/euclid?color=yellow&logo=Github&style=for-the-badge) ![GitHub watchers](https://img.shields.io/github/watchers/eggnaut/euclid?color=orange&logo=Github&style=for-the-badge)
@@ -21,9 +24,6 @@ Automatically generate quadratic equations to study/practice with.
 ![GitHub language count](https://img.shields.io/github/languages/count/eggnaut/euclid?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/eggnaut/euclid?logo=Python&logoColor=yellow&style=for-the-badge)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/eggnaut/euclid?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/eggnaut/euclid?style=for-the-badge)
-
-## Archive Notice:
-`euclid` will stop recieving major updates as of March 4, 2023. Minor changes and fixes may be made, but no guarentees. New features will not be added and euclid will not be tested further. Use at your own risk. The project may not function properly with newer versions of Python.
 
 ## Features:
 Automatically generates quadratic equations given endpoints and number of equations. The endpoints are used to determine the range of _a_, _b_, and _c_ (in a quadratic equation).
